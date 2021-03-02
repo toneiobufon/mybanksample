@@ -1,3 +1,49 @@
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  -webkit-animation: fade-in 300ms ease-in-out forwards;
+          animation: fade-in 300ms ease-in-out forwards;
+}
+
+@-webkit-keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fade-out {
+  -webkit-animation: fade-out 300ms ease-in-out forwards;
+          animation: fade-out 300ms ease-in-out forwards;
+}
+
 html {
   font-size: 100%;
   -webkit-box-sizing: border-box;
@@ -70,6 +116,12 @@ button, .button {
   }
 }
 
+.header.open .overlay {
+  display: block;
+  -webkit-animation: fade-in  30ms ease-in-out forwards;
+          animation: fade-in  30ms ease-in-out forwards;
+}
+
 .header.open .header_menu > span:first-child {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
@@ -85,6 +137,7 @@ button, .button {
 }
 
 .header .overlay {
+  display: none;
   position: fixed;
   top: 3.75rem;
   right: 0;
@@ -92,6 +145,8 @@ button, .button {
   left: 0;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#2d314d), to(transparent));
   background-image: linear-gradient(#2d314d, transparent);
+  -webkit-animation: fade-out 30ms ease-in-out forwards;
+          animation: fade-out 30ms ease-in-out forwards;
 }
 
 .header nav {
