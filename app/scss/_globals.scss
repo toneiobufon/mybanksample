@@ -1,6 +1,9 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
+
+  
+  
 }
 
 *, *::before, *::after {
@@ -16,7 +19,12 @@ body {
   color: $grayishBlue;
   line-height: 1.3;
   min-height: 350vh;
+  
+ 
   overflow-x: hidden;
+  border: 1px solid red;
+  
+  
 
   @include breakpoint-up(large){
     font-size: $font-med;
@@ -25,6 +33,7 @@ body {
   &.noscroll {
     overflow: hidden;
   }
+  
 }
 
 // Text
@@ -176,3 +185,4 @@ button, .button {
     display: none;
   }
 }
+
